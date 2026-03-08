@@ -2,8 +2,10 @@
 import random
 number = random.randint(-10000, 10000)
 
-# Son rəqəmi tapırıq (mənfi ədədlər üçün də düzgün işləyir)
+# Düzgün son rəqəm (mənfi üçün də işləyir)
 last_digit = number % 10
+if number < 0:
+    last_digit = 10-last_digit
 
 if last_digit > 5:
     print(f"Last digit of {number} is {last_digit} and is greater than 5")
