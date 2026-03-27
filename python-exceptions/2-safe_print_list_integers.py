@@ -2,18 +2,12 @@
 
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
-    i = 0
-    try:
-        while i < x:
-            try:
-                print("{:d}".format(my_list[i]), end="")
-                count += 1
-            except (ValueError, TypeError):
-                # Skip non-integers silently
-                pass
-            i += 1
-    except IndexError:
-        # Let IndexError happen when x is too big
-        pass
-    print()  # new line
+    for i in range(x):
+        try:
+            print("{:d}".format(my_list[i]), end="")
+            count += 1
+        except (ValueError, TypeError):
+            # Skip non-integer values silently
+            pass
+    print("")  # Print the new line at the end
     return count
