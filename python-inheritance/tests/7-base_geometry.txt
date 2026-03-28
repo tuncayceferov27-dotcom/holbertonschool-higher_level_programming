@@ -1,0 +1,7 @@
+# Test BaseGeometry class
+# Run this test with: python3 ../7-main.py
+
+- integer_validator with positive int: should pass
+- integer_validator with string: should raise TypeError
+- integer_validator with 0: should raise ValueError
+- integer_validator with negative int: should raise ValueError
